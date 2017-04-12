@@ -46,7 +46,7 @@ public class TextReader {
 		} catch (FileNotFoundException e) {
 			System.out.println("This file is not exist");
 		}
-	}
+	}         
 
 	private void initReader(String fileName) throws FileNotFoundException {
 
@@ -54,6 +54,15 @@ public class TextReader {
 		reader = new LineNumberReader(fileReader);
 	}
 
+	public BaseToken read(){
+		
+		return tokens.poll();
+	}
+	
+	public BaseToken peek(){
+		
+		return tokens.peek();
+	}
 	public void parse() throws IOException {
 		while (hasMoreLine()) {
 			parseLine();
