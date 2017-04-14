@@ -29,6 +29,7 @@ public class TextReader {
 	private static Pattern patterner = Pattern.compile(patternStr);
 	private LineNumberReader reader;
 	private String lineBuf = "";
+	
 
 	private Queue<BaseToken> tokens = new LinkedList<>();
 

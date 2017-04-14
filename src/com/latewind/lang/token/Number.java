@@ -1,6 +1,7 @@
 package com.latewind.lang.token;
 
 public class Number extends BaseToken {
+	
 	private Integer value;
 
 	public Number(Integer value) {
